@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Speech-to-Text Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>🎙️ Speech-to-Text Converter</h1>
+
+    <div class="controls">
+      <label for="lang">Language:</label>
+      <select id="lang">
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="hi-IN">Hindi (India)</option>
+        <option value="es-ES">Spanish (ES)</option>
+        <option value="fr-FR">French (FR)</option>
+        <!-- add more languages as required -->
+      </select>
+
+      <button id="startBtn" class="primary">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <div class="status" id="status">Status: Idle</div>
+
+    <label for="transcript">Transcript</label>
+    <textarea id="transcript" placeholder="Recognized speech will appear here..." rows="10" readonly></textarea>
+
+    <div class="actions">
+      <button id="copyBtn">Copy</button>
+      <button id="downloadBtn">Download (.txt)</button>
+      <label><input type="checkbox" id="interim" checked> Show interim results</label>
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> This app uses the browser's Web Speech API. Allow microphone access when prompted.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
